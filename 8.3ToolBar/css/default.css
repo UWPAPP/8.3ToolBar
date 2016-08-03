@@ -1,0 +1,30 @@
+﻿body {
+}
+
+body {
+	background-color: rgb(112,112,112);
+}
+
+#content {
+	text-align: center;
+}
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+	position: relative;
+
+}
+
+.groupingToolbar {
+	margin-top: 50px;
+    width: 100%;
+}
+
+.status {
+	margin-top: 12px;
+}
+
+.sampleToolBar2 {
+	margin-top:290px;
+}

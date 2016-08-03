@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>_8.3ToolBar</title>
+    <link href="lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="lib/winjs-4.0.1/js/base.js"></script>
+    <script src="lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="js/main.js"></script>
+</head>
+<body class="win-type-body">
+
+    <!--priority  作用：当屏幕变小是，会优先从priority高的消失 。 默认是从右到左消失-->
+    <div class="groupingToolbar" data-win-control="WinJS.UI.ToolBar">
+        <!-- Primary commands -->
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdEdit',
+            label:'edit',
+            section:'primary',
+            type:'button',
+            icon: 'edit',
+            priority:2,
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdDelete',
+            label:'delete',
+            section:'primary',
+            type:'button',
+            icon: 'delete',
+            priority:2,
+            onclick: Sample.outputCommand}"></button>
+        <hr data-win-control="WinJS.UI.Command" data-win-options="{type:'separator'}" />
+
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdFavorite',
+            label:'favorite',
+            section:'primary',
+            type:'toggle',
+            icon: 'favorite',
+            priority:3,
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdOpenWith',
+            label:'open with',
+            section:'primary',
+            type:'button',
+            icon: 'openfile',
+            priority:3,
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdDownload',
+            label:'download',
+            section:'primary',
+            type:'button',
+            icon: 'download',
+            priority:3,
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdPin',
+            label:'pin',
+            section:'primary',
+            type:'button',
+            icon: 'pin',
+            priority:3,
+            onclick: Sample.outputCommand}"></button>
+        <hr data-win-control="WinJS.UI.Command" data-win-options="{type:'separator'}" />
+
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdZoom',
+            label:'zoom',
+            section:'primary',
+            type:'button',
+            icon: 'zoomin',
+            priority:1,
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdFullscreen',
+            label:'full screen',
+            section:'primary',
+            type:'button',
+            icon: 'fullscreen',
+            priority:1,
+            onclick: Sample.outputCommand}"></button>
+
+        <!-- Secondary command -->
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdSettings',
+            label:'settings',
+            section:'secondary',
+            type:'button',
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdShare',
+            label:'share',
+            section:'secondary',
+            type:'button',
+            onclick: Sample.outputCommand}"></button>
+    </div>
+    <div class="status"></div>
+
+
+    <div class="sampleToolBar2" data-win-control="WinJS.UI.ToolBar"
+         data-win-options="{data: Sample.commandList}"></div>
+    <div class="status"></div>
+</body>
+</html>
